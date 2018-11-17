@@ -1,6 +1,40 @@
 # GMiner
 
-GMiner: A fast GPU-based frequent itemset mining method for large-scale data
+## Introduction
+<b>GMiner</b> is an algorithm for finding frequent itemsets using computing power of GPUs.</br>
 
-## Abstract
-Frequent itemset mining is widely used as a fundamental data mining technique. However, as the data size increases, the relatively slow performances of the existing methods hinder its applicability. Although many sequential frequent itemset mining methods have been proposed, there is a clear limit to the performance that can be achieved using a single thread. To overcome this limitation, various parallel methods using multi-core CPU, multiple machine, or many-core graphic processing unit (GPU) approaches have been proposed. However, these methods still have drawbacks, including relatively slow performance, data size limitations, and poor scalability due to workload skewness. In this paper, we propose a fast GPU-based frequent itemset mining method called GMiner for large-scale data. GMiner achieves very fast performance by fully exploiting the computational power of GPUs and is suitable for large-scale data. The method performs mining tasks in a counterintuitive way: it mines the patterns from the first level of the enumeration tree rather than storing and utilizing the patterns at the intermediate levels of the tree. This approach is quite effective in terms of both performance and memory use in the GPU architecture. In addition, GMiner solves the workload skewness problem from which the existing parallel methods suffer; as a result, its performance increases almost linearly as the number of GPUs increases. Through extensive experiments, we demonstrate that GMiner significantly outperforms other representative sequential and parallel methods in most cases, by orders of magnitude on the tested benchmarks.
+<b>GMiner</b> has the following characteristics:
+* Scalable with respect to the size of datasets, which do not fit into GPU device memory
+* Scalable with respect to the number of GPUs by evenly distributing amount of work to each GPU
+* Fast and robust comparing to the state-of-the art methods (especially, handling large-scale datasets)
+
+
+
+## Research Paper
+[GMiner: A fast GPU-based frequent itemset mining method for large-scale data](https://www.sciencedirect.com/science/article/pii/S0020025518300690)
+
+## Implementation
+Implemented C++ code interacting with GPU servers and computing frequent itemsets according to itemsets.
+
+## Installation
+
+* This version requires (1) g++ v.4.8 or greater be installed in the system and set in PATH, (2) Boost C++ Libraries be installed and set in PATH, and (3) CUDA 8 be installed and set in PATH (we are not testing GMiner on other configurations)
+* For compilation, type *./build.sh* and then get “*GMiner*” in the same directory
+* For cleaning executable files, type *./clean.sh*
+
+## Input File Format
+
+In an input dataset, each transaction is stored in a single line (row). In the transaction, items are non-negative integers and separated by a space.
+
+## Output File Format
+The output includes a number of lines. Each line includes a single frequent itemset and its support ratio in a range of [0,1].
+
+## How to run
+### Command
+./GMiner -i <input_path> -o <output_path> -s <minsup> -w <is_write_output>
+
+### Parameters
+* *input_path*: path of the input file (in default “webdocs” in the directory).
+* *output_path*: path of the output file (in default “out”)
+* *minsup*: minimum support (in range [0.0,1.0], in default 0.1)
+* *is_write_output*: whether it writes outputs or not (0: no, 1: yes, in default 0)
