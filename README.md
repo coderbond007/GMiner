@@ -31,10 +31,10 @@ The output includes a number of lines. Each line includes a single frequent item
 
 ## How to run
 ### Command
-./GMiner -i <input_path> -o <output_path> -s <minsup> -w <is_write_output>
+./GMiner -i <input_path> -o <output_path> -s <min_sup> -w <is_write_output>
 
 ### Parameters
-* *input_path*: path of the input file (in default “webdocs” in the directory).
-* *output_path*: path of the output file (in default “out”)
-* *minsup*: minimum support (in range [0.0,1.0], in default 0.1)
-* *is_write_output*: whether it writes outputs or not (0: no, 1: yes, in default 0)
+* *input_path* (-i): path of the input file (in default “webdocs” in the directory).
+* *output_path* (-o): path of the output file (in default “out”)
+* *min_sup* (-s) : minimum support (in range [0.0,1.0], in default 0.1)
+* *is_write_output* (-w): whether it writes outputs or not (0: no, 1: yes, in default 0)
