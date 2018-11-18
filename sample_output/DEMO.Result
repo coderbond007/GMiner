@@ -1,0 +1,78 @@
+GMiner frequent itemset mining implementation
+by Pradyumn Agrawal, Akash Budhauliya, Arjun Gupta, 2018
+input - sample_input/sample.dat, output - output/sample.out, minsup - 0.1, verticalListLength - 4096
+numOfGPUs - 1, numOfStreams - 1, isMat - 0, sizeofFragments - 3, isWirteOutput - 1
+Reading file into main memory. [0.000208139 sec]
+Finding frequent 1-itemsets. [3.19481e-05 sec]
+Transforming vertical format with bit vectors from horizontal format. [0.000120878 sec]
+Building the buffers of TB and SA with respect to the TFL strategy. [6.4709 sec]
+Allocating the buffers with respect to candidate itemsets. [5.04002 sec]
+Allocating the buffers on GPU device memory. [0.00260496 sec]
+Generating candidate itemsets. [5.00679e-06 sec]
+Performing support counting. [0.00147319 sec]
+Printing frequent itemsets.
+candidate_list_length - 105, candidate_list_width - 2, numOfTransactions - 100
+Performing Level 2. [0.00496602 sec]
+- the # of frequent itemsets - 69
+Generating candidate itemsets. [1.5974e-05 sec]
+Performing support counting. [0.000654936 sec]
+Printing frequent itemsets.
+candidate_list_length - 223, candidate_list_width - 3, numOfTransactions - 100
+Performing Level 3. [0.00242901 sec]
+- the # of frequent itemsets - 215
+Generating candidate itemsets. [2.19345e-05 sec]
+Performing support counting. [0.000515223 sec]
+Printing frequent itemsets.
+candidate_list_length - 437, candidate_list_width - 4, numOfTransactions - 100
+Performing Level 4. [0.00360608 sec]
+- the # of frequent itemsets - 430
+Generating candidate itemsets. [2.59876e-05 sec]
+Performing support counting. [0.000741959 sec]
+Printing frequent itemsets.
+candidate_list_length - 563, candidate_list_width - 5, numOfTransactions - 100
+Performing Level 5. [0.00405693 sec]
+- the # of frequent itemsets - 557
+Generating candidate itemsets. [2.59876e-05 sec]
+Performing support counting. [0.000659943 sec]
+Printing frequent itemsets.
+candidate_list_length - 461, candidate_list_width - 6, numOfTransactions - 100
+Performing Level 6. [0.00321913 sec]
+- the # of frequent itemsets - 459
+Generating candidate itemsets. [1.00136e-05 sec]
+Performing support counting. [0.00049305 sec]
+Printing frequent itemsets.
+candidate_list_length - 231, candidate_list_width - 7, numOfTransactions - 100
+Performing Level 7. [0.00172806 sec]
+- the # of frequent itemsets - 231
+Generating candidate itemsets. [6.91414e-06 sec]
+Performing support counting. [0.000255108 sec]
+Printing frequent itemsets.
+candidate_list_length - 65, candidate_list_width - 8, numOfTransactions - 100
+Performing Level 8. [0.00101089 sec]
+- the # of frequent itemsets - 65
+Generating candidate itemsets. [2.86102e-06 sec]
+Performing support counting. [0.000262022 sec]
+Printing frequent itemsets.
+candidate_list_length - 8, candidate_list_width - 9, numOfTransactions - 100
+Performing Level 9. [0.000850916 sec]
+- the # of frequent itemsets - 8
+Generating candidate itemsets. [9.53674e-07 sec]
+Performing support counting. [9.53674e-07 sec]
+Printing frequent itemsets.
+candidate_list_length - 0, candidate_list_width - 10, numOfTransactions - 100
+Performing Level 10. [0.000565052 sec]
+- the # of frequent itemsets - 0
+Presenting the information of runtime
+- dataset: sample_input/sample.dat, minsup: 0.1
+- vertical list length: 4096
+- the # of streams: 1
+- the maximum GPU blocks: 20000000
+- the maximum GPU threads per block: 64
+- the # of GPUs: 1
+Presenting the elapsed time for each steps
+Building vertical database. [0.000267982 sec]
+Building mining framework. [11.5149 sec]
+Generating pre-computation. [0 sec]
+Performing mining operations. [0.0225129 sec]
+- Generating candidate itemsets. [0.000338078 sec]
+- Performing support counting. [0.0221748 sec]

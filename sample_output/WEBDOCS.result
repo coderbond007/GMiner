@@ -1,0 +1,90 @@
+GMiner frequent itemset mining implementation
+by Pradyumn Agrawal, Akash Budhauliya, Arjun Gupta, 2018
+input - input/webdocs.dat, output - output/WEBDOCS.out, minsup - 0.1, verticalListLength - 4096
+numOfGPUs - 1, numOfStreams - 1, isMat - 0, sizeofFragments - 3, isWirteOutput - 1
+Reading file into main memory. [85.7326 sec]
+Finding frequent 1-itemsets. [2.31403 sec]
+Transforming vertical format with bit vectors from horizontal format. [0.215567 sec]
+Building the buffers of TB and SA with respect to the TFL strategy. [10.8254 sec]
+Allocating the buffers with respect to candidate itemsets. [5.08842 sec]
+Allocating the buffers on GPU device memory. [0.339037 sec]
+Generating candidate itemsets. [0.00019908 sec]
+Performing support counting. [0.250964 sec]
+Printing frequent itemsets.
+candidate_list_length - 34716, candidate_list_width - 2, numOfTransactions - 1692082
+Performing Level 2. [0.26244 sec]
+- the # of frequent itemsets - 2754
+Generating candidate itemsets. [0.000509977 sec]
+Performing support counting. [0.221722 sec]
+Printing frequent itemsets.
+candidate_list_length - 26125, candidate_list_width - 3, numOfTransactions - 1692082
+Performing Level 3. [0.261445 sec]
+- the # of frequent itemsets - 12343
+Generating candidate itemsets. [0.001127 sec]
+Performing support counting. [0.348023 sec]
+Printing frequent itemsets.
+candidate_list_length - 40619, candidate_list_width - 4, numOfTransactions - 1692082
+Performing Level 4. [0.425562 sec]
+- the # of frequent itemsets - 31857
+Generating candidate itemsets. [0.00109982 sec]
+Performing support counting. [0.591223 sec]
+Printing frequent itemsets.
+candidate_list_length - 57336, candidate_list_width - 5, numOfTransactions - 1692082
+Performing Level 5. [0.751673 sec]
+- the # of frequent itemsets - 52086
+Generating candidate itemsets. [0.00245309 sec]
+Performing support counting. [0.632491 sec]
+Printing frequent itemsets.
+candidate_list_length - 58565, candidate_list_width - 6, numOfTransactions - 1692082
+Performing Level 6. [0.781524 sec]
+- the # of frequent itemsets - 55869
+Generating candidate itemsets. [0.00116682 sec]
+Performing support counting. [0.524878 sec]
+Printing frequent itemsets.
+candidate_list_length - 40059, candidate_list_width - 7, numOfTransactions - 1692082
+Performing Level 7. [0.632526 sec]
+- the # of frequent itemsets - 39300
+Generating candidate itemsets. [0.00116611 sec]
+Performing support counting. [0.267337 sec]
+Printing frequent itemsets.
+candidate_list_length - 17829, candidate_list_width - 8, numOfTransactions - 1692082
+Performing Level 8. [0.332218 sec]
+- the # of frequent itemsets - 17711
+Generating candidate itemsets. [0.000325918 sec]
+Performing support counting. [0.092953 sec]
+Printing frequent itemsets.
+candidate_list_length - 4845, candidate_list_width - 9, numOfTransactions - 1692082
+Performing Level 9. [0.109433 sec]
+- the # of frequent itemsets - 4840
+Generating candidate itemsets. [0.00019908 sec]
+Performing support counting. [0.031848 sec]
+Printing frequent itemsets.
+candidate_list_length - 712, candidate_list_width - 10, numOfTransactions - 1692082
+Performing Level 10. [0.0347202 sec]
+- the # of frequent itemsets - 711
+Generating candidate itemsets. [1.00136e-05 sec]
+Performing support counting. [0.020108 sec]
+Printing frequent itemsets.
+candidate_list_length - 41, candidate_list_width - 11, numOfTransactions - 1692082
+Performing Level 11. [0.0209348 sec]
+- the # of frequent itemsets - 41
+Generating candidate itemsets. [2.14577e-06 sec]
+Performing support counting. [3.09944e-06 sec]
+Printing frequent itemsets.
+candidate_list_length - 0, candidate_list_width - 12, numOfTransactions - 1692082
+Performing Level 12. [0.000812054 sec]
+- the # of frequent itemsets - 0
+Presenting the information of runtime
+- dataset: input/webdocs.dat, minsup: 0.1
+- vertical list length: 4096
+- the # of streams: 1
+- the maximum GPU blocks: 20000000
+- the maximum GPU threads per block: 64
+- the # of GPUs: 1
+Presenting the elapsed time for each steps
+Building vertical database. [88.1341 sec]
+Building mining framework. [16.479 sec]
+Generating pre-computation. [0 sec]
+Performing mining operations. [3.61339 sec]
+- Generating candidate itemsets. [0.0139315 sec]
+- Performing support counting. [3.59946 sec]
